@@ -22,7 +22,8 @@
         font-size: 64px;
       }
 
-      .winner {
+      .winner,
+      .instructionWrapper {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,9 +33,52 @@
         width: 100vw;
         flex-flow: column;
       }
+
+      .instructions {
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        flex-flow: column;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .instructions h1 {
+        color: black;
+        font-size: 32px;
+        margin-bottom: 0.5rem;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        width: 90%;
+      }
     </style>
   </head>
   <body>
+    <div class="instructionWrapper">
+      <div class="instructions">
+        <h1>Welcome to Maze JS</h1>
+        <h4>Can you solve the maze and get the ball to the goal?</h4>
+        <ul>
+          <li style="margin-bottom: 0.5rem;">
+            You can move the ball using the keys below
+          </li>
+          <li>w - Up</li>
+          <li>d - Right</li>
+          <li>x - Down</li>
+          <li>a - Left</li>
+        </ul>
+        <button id="start">Start</button>
+      </div>
+    </div>
     <div class="winner hidden">
       <h1>You Win!</h1>
       <button id="reset">Play Again?</button>

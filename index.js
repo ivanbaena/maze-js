@@ -229,3 +229,9 @@ reset.addEventListener('click', (event) => {
   event.preventDefault();
   window.location.reload();
 });
+
+const start = document.querySelector('#start');
+start.addEventListener('click', (event) => {
+  event.preventDefault();
+  event.target.parentElement.classList.add('hidden');
+});
